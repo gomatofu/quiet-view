@@ -6,20 +6,20 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       <div className="max-w-7xl mx-auto">
-        <header className="flex justify-between items-center px-8 py-8">
+        <header className="flex justify-between items-center px-8 py-8" role="banner">
           <div>
             <h1 className="text-4xl font-bold text-foreground">
               Quiet View
             </h1>
-            <p className="text-base text-muted-foreground mt-2">
+            <p className="text-base text-muted-foreground mt-2" role="doc-subtitle">
               Watch the world in real-time
             </p>
           </div>
           <LoFiToggle />
         </header>
-        <div className="px-8 pb-6">
+        <section className="px-8 pb-6" role="main" aria-label="Live camera feeds from cities around the world">
           <LiveGrid />
-        </div>
+        </section>
         <FooterPoem />
       </div>
     </main>

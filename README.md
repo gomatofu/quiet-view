@@ -84,6 +84,29 @@ The project uses a carefully crafted design system with:
 | Sydney | Australia | Australia/Sydney (AEDT) |
 | São Paulo | Brazil | America/Sao_Paulo (BRT) |
 
+## 🚀 SEO & Performance
+
+The project includes comprehensive SEO optimizations:
+
+- **Structured Data**: JSON-LD markup for better search engine understanding
+- **Open Graph**: Optimized social media sharing with custom OG image
+- **PWA Ready**: Web app manifest for mobile installation
+- **Performance**: Optimized images, compression, and caching headers
+- **Accessibility**: ARIA labels, focus management, and semantic HTML
+- **Analytics Ready**: Google Analytics integration (set `NEXT_PUBLIC_GA_ID`)
+
+### Environment Variables
+
+Create a `.env.local` file with:
+
+```bash
+# Google Analytics (optional)
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+
+# Google Search Console verification (optional)
+NEXT_PUBLIC_GSC_VERIFICATION=your-verification-code
+```
+
 ## 🔧 Development
 
 ### Project Structure

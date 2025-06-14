@@ -1,15 +1,15 @@
 "use client";
 
 import { useRef, useState } from "react";
-import YouTube, { YouTubeProps } from "react-youtube";
+import YouTube from "react-youtube";
 import { Music } from "lucide-react";
 
 export default function LoFiToggle() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const playerRef = useRef<any>(null);
+  const playerRef = useRef<YT.Player | null>(null);
 
   /** YouTube が準備できたらプレーヤー参照を保存 */
-  const onReady = (event: any) => {
+  const onReady = (event: { target: YT.Player }) => {
     playerRef.current = event.target;
   };
 
@@ -34,10 +34,12 @@ export default function LoFiToggle() {
         </span>
         <button
           onClick={toggleMusic}
-          className={`relative w-10 h-5 rounded-full transition-colors duration-300 ${
+          className={`relative w-10 h-5 rounded-full transition-colors duration-300 focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background focus:outline-none ${
             isPlaying ? "bg-[#14B8A6]" : "bg-[#333333]"
           }`}
-          aria-label="Toggle lo-fi music"
+          aria-label={isPlaying ? "Pause lo-fi music" : "Play lo-fi music"}
+          aria-checked={isPlaying}
+          role="switch"
         >
           <div
             className={`absolute top-0.5 left-0.5 w-4 h-4 rounded-full transition-transform duration-300 ${

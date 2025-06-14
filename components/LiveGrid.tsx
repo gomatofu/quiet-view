@@ -1,6 +1,5 @@
 "use client";
 
-import { Card, CardContent } from "@/components/ui/card";
 import Clock from "./Clock";
 
 interface LiveCamera {
@@ -60,13 +59,16 @@ export default function LiveGrid() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
       {liveCameras.map((camera) => (
-        <div key={camera.id} className="relative aspect-video bg-zinc-900 rounded-lg overflow-hidden">
+        <div key={camera.id} className="relative aspect-video bg-zinc-900 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-accent focus-within:ring-offset-2 focus-within:ring-offset-background">
           <iframe
             src={camera.embedUrl}
-            title={`${camera.city} Live Camera`}
+            title={`Live camera view of ${camera.city}, ${camera.country}. Current time: ${camera.timezone}`}
             className="absolute inset-0 w-full h-full"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            tabIndex={0}
+            role="img"
+            aria-label={`Live camera feed from ${camera.city}, ${camera.country}`}
           />
           <div className="absolute bottom-6 left-6">
             <h3 className="text-xl font-medium text-white mb-1">

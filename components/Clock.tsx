@@ -37,7 +37,7 @@ export default function Clock({ timezone }: ClockProps) {
       "America/New_York": "EST",
       "Europe/London": "GMT",
       "Europe/Paris": "CET",
-      "Australia/Sydney": "AEDT",
+      "Australia/Sydney": "AEST",
       "America/Sao_Paulo": "BRT",
     };
     return abbr[tz] || "UTC";
