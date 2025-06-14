@@ -11,6 +11,8 @@ A minimalist web application that provides a peaceful way to watch live cameras 
 - **Lo-Fi Music Toggle**: Optional ambient music for a relaxing atmosphere
 - **Minimalist Design**: Clean, distraction-free interface with dark theme
 - **Responsive Layout**: Works seamlessly across desktop, tablet, and mobile devices
+- **Enhanced Visuals**: Gradient overlays for better text readability
+- **Legal Pages**: Privacy Policy and Terms of Service for compliance
 - **Zero Distractions**: No ads, no clutter, just peaceful observation
 
 ## 🎯 Philosophy
@@ -68,10 +70,13 @@ The project uses a carefully crafted design system with:
 
 ## 📱 Components
 
-- **LiveGrid**: Main grid displaying 6 city camera feeds
+- **LiveGrid**: Main grid displaying 6 city camera feeds with gradient overlays
 - **Clock**: Real-time clock component with timezone support
 - **LoFiToggle**: Music toggle with visual feedback
 - **FooterPoem**: Inspirational text section
+- **Footer**: Legal links for Terms of Service and Privacy Policy
+- **Analytics**: Google Analytics integration component
+- **StructuredData**: JSON-LD structured data for SEO
 
 ## 🌍 Supported Cities
 
@@ -116,15 +121,21 @@ quiet-view/
 ├── app/                 # Next.js App Router
 │   ├── globals.css     # Global styles and design tokens
 │   ├── layout.tsx      # Root layout component
-│   └── page.tsx        # Main page component
+│   ├── page.tsx        # Main page component
+│   ├── privacy/        # Privacy Policy page
+│   └── terms/          # Terms of Service page
 ├── components/         # React components
+│   ├── Analytics.tsx   # Google Analytics component
 │   ├── Clock.tsx       # Time display component
-│   ├── FooterPoem.tsx  # Footer text component
+│   ├── Footer.tsx      # Legal links footer
+│   ├── FooterPoem.tsx  # Inspirational text component
 │   ├── LiveGrid.tsx    # Main grid component
 │   ├── LoFiToggle.tsx  # Music toggle component
+│   ├── StructuredData.tsx # JSON-LD structured data
 │   └── ui/             # shadcn/ui components
 ├── lib/                # Utility functions
-└── public/             # Static assets
+├── types/              # TypeScript type definitions
+└── public/             # Static assets (favicon, OG image, manifest)
 ```
 
 ### Scripts
@@ -133,6 +144,9 @@ quiet-view/
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint errors automatically
+- `npm run type-check` - TypeScript type checking
+- `npm run check` - Run both type-check and lint
 
 ## 🎵 Music Attribution
 
