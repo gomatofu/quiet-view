@@ -1,57 +1,71 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import YouTube, { YouTubeProps } from "react-youtube";
 import { Music } from "lucide-react";
 
 export default function LoFiToggle() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const playerRef = useRef<any>(null);
 
-  useEffect(() => {
-    audioRef.current = new Audio("https://stream.lofi.cafe/radio/8bit/lofi.cafe_8bit.mp3");
-    audioRef.current.loop = true;
-    audioRef.current.volume = 0.5;
+  /** YouTube が準備できたらプレーヤー参照を保存 */
+  const onReady = (event: any) => {
+    playerRef.current = event.target;
+  };
 
-    return () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current = null;
-      }
-    };
-  }, []);
-
+  /** 再生 / 停止トグル */
   const toggleMusic = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play().catch((error) => {
-          console.error("Failed to play audio:", error);
-        });
-      }
-      setIsPlaying(!isPlaying);
+    if (!playerRef.current) return;        // まだ初期化前
+    if (isPlaying) {
+      playerRef.current.pauseVideo();
+    } else {
+      playerRef.current.playVideo();       // ← ユーザー操作直後なのでブロックされない
     }
+    setIsPlaying(!isPlaying);
   };
 
   return (
-    <div className="flex items-center gap-3 px-4 py-2 rounded-full border border-zinc-800 bg-zinc-900">
-      <Music className="h-4 w-4 text-zinc-300" />
-      <span className="text-sm text-zinc-300">Lo-Fi</span>
-      <button
-        onClick={toggleMusic}
-        className={`relative w-12 h-6 rounded-full transition-colors duration-300 ${
-          isPlaying ? "bg-emerald-400" : "bg-zinc-800"
-        }`}
-        aria-label="Toggle lo-fi music"
-      >
-        <div
-          className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full transition-all duration-300 ${
-            isPlaying 
-              ? "translate-x-6 bg-white" 
-              : "translate-x-0 bg-zinc-600"
+    <>
+      {/* --- UI 部分 ------------------------------------------------ */}
+      <div className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-zinc-700 bg-zinc-800/50">
+        <Music className="h-3.5 w-3.5 text-[#14B8A6] text-accent" />
+        <span className="text-sm text-zinc-300">
+          Lo-Fi
+        </span>
+        <button
+          onClick={toggleMusic}
+          className={`relative w-10 h-5 rounded-full transition-colors duration-300 ${
+            isPlaying ? "bg-[#14B8A6]" : "bg-[#333333]"
           }`}
+          aria-label="Toggle lo-fi music"
+        >
+          <div
+            className={`absolute top-0.5 left-0.5 w-4 h-4 rounded-full transition-transform duration-300 ${
+              isPlaying
+                ? "translate-x-5 bg-white"
+                : "translate-x-0 bg-[#14B8A6]"
+            }`}
+          />
+        </button>
+      </div>
+
+      {/* --- 隠しプレーヤー ----------------------------------------- */}
+      <div className="fixed top-0 left-0 w-0 h-0 overflow-hidden opacity-0">
+        <YouTube
+          videoId="jfKfPfyJRdk"
+          onReady={onReady}
+          opts={{
+            playerVars: {
+              autoplay: 0,        // ← ここでは 0。クリックで playVideo() する
+              controls: 0,
+              loop: 1,
+              playlist: "jfKfPfyJRdk",
+              modestbranding: 1,
+              rel: 0,
+            },
+          }}
         />
-      </button>
-    </div>
+      </div>
+    </>
   );
 }

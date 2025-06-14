@@ -60,7 +60,7 @@ export default function LiveGrid() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
       {liveCameras.map((camera) => (
-        <div key={camera.id} className="relative aspect-video bg-zinc-950 overflow-hidden">
+        <div key={camera.id} className="relative aspect-video bg-zinc-900 rounded-lg overflow-hidden">
           <iframe
             src={camera.embedUrl}
             title={`${camera.city} Live Camera`}
@@ -68,12 +68,10 @@ export default function LiveGrid() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
-          <div className="absolute top-4 left-4">
-            <h3 className="text-lg font-light text-white">
+          <div className="absolute bottom-6 left-6">
+            <h3 className="text-xl font-medium text-white mb-1">
               {camera.city}
             </h3>
-          </div>
-          <div className="absolute bottom-4 left-4">
             <Clock timezone={camera.timezone} />
           </div>
         </div>
