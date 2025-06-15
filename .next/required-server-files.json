@@ -59,7 +59,14 @@
       "dangerouslyAllowSVG": false,
       "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;",
       "contentDispositionType": "attachment",
-      "remotePatterns": [],
+      "remotePatterns": [
+        {
+          "protocol": "https",
+          "hostname": "cdn.buymeacoffee.com",
+          "port": "",
+          "pathname": "/**"
+        }
+      ],
       "unoptimized": false
     },
     "devIndicators": {
@@ -303,7 +310,7 @@
     ".next/BUILD_ID",
     ".next/server/next-font-manifest.js",
     ".next/server/next-font-manifest.json",
-    ".next/static/css/0f70d11f419d8c54.css"
+    ".next/static/css/0bb5f29e499a6d6e.css"
   ],
   "ignore": [
     "node_modules/next/dist/compiled/@ampproject/toolbox-optimizer/**/*"

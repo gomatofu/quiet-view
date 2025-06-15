@@ -2,6 +2,7 @@ import LiveGrid from "@/components/LiveGrid";
 import LoFiToggle from "@/components/LoFiToggle";
 import FooterPoem from "@/components/FooterPoem";
 import BuyMeCoffee from "@/components/BuyMeCoffee";
+import XShareButton from "@/components/XShareButton";
 
 export default function Home() {
   return (
@@ -16,7 +17,10 @@ export default function Home() {
               Watch the world in real-time
             </p>
           </div>
-          <LoFiToggle />
+          <div className="flex items-center gap-3">
+            <XShareButton />
+            <LoFiToggle />
+          </div>
         </header>
         <section className="px-8 pb-6" role="main" aria-label="Live camera feeds from cities around the world">
           <LiveGrid />
