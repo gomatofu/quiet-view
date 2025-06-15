@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://quietview.app/og.jpg",
+        url: "https://quietview.app/og-v2.jpg",
         width: 1200,
         height: 630,
         alt: "Quiet View - Six windows. One quiet world.",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Quiet View — Six quiet windows to the world",
     description: "A quiet place to watch cities live. Watch the present moment unfold across cities.",
-    images: ["https://quietview.app/og.jpg"],
+    images: ["https://quietview.app/og-v2.jpg"],
   },
   robots: {
     index: true,

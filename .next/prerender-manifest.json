@@ -1,30 +1,6 @@
 {
   "version": 4,
   "routes": {
-    "/privacy": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/privacy",
-      "dataRoute": "/privacy.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/terms": {
       "experimentalBypassFor": [
         {
@@ -72,13 +48,37 @@
         "x-next-revalidated-tags",
         "x-next-revalidate-tag-token"
       ]
+    },
+    "/privacy": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/privacy",
+      "dataRoute": "/privacy.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
     }
   },
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "090bf4e4f8327564dcc391cdc8c1d6c5",
-    "previewModeSigningKey": "397c0f5a973f6eb1c6e4aef6b4e9ee0358a4e8a47b0e38f3f5e987216e884cb0",
-    "previewModeEncryptionKey": "91c15e5662c7e06c5cee7b67faa176cff6b0c1ef32713c44ff3d051f722f299d"
+    "previewModeId": "84e834cf6323bd2f20aca6052a3c9a88",
+    "previewModeSigningKey": "4cd8a067a1fbbbe86033f81605d547b50a333c60cb3ab1f80a6df4a45389296b",
+    "previewModeEncryptionKey": "ac75a3101fa81900ed123d4bfc2a68c74f83a6f8a7e15933cad7381b671e1105"
   }
 }
