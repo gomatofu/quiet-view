@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { Coffee } from "lucide-react";
 
 export default function BuyMeCoffee() {
   return (
@@ -9,15 +9,12 @@ export default function BuyMeCoffee() {
         href="https://buymeacoffee.com/gomatofu"
         target="_blank"
         rel="noopener noreferrer"
-        className="block transition-transform duration-200 hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-black rounded-lg"
+        className="flex items-center justify-center w-12 h-12 bg-yellow-400 hover:bg-yellow-300 rounded-full shadow-lg transition-all duration-200 hover:scale-110 focus:scale-110 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-black group"
+        title="Buy Me A Coffee"
       >
-        <Image
-          src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-          alt="Buy Me A Coffee"
-          width={200}
-          height={60}
-          className="rounded-lg shadow-lg"
-          priority
+        <Coffee 
+          size={20} 
+          className="text-black transition-transform duration-200 group-hover:scale-110" 
         />
       </a>
     </div>
