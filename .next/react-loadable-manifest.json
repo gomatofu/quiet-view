@@ -1,8 +1,8 @@
 {
   "components/LiveGrid.tsx -> ./LiveIframe": {
-    "id": 6469,
+    "id": "components/LiveGrid.tsx -> ./LiveIframe",
     "files": [
-      "static/chunks/469.1507a13eee473183.js"
+      "static/chunks/_app-pages-browser_components_LiveIframe_tsx.js"
     ]
   }
 }
