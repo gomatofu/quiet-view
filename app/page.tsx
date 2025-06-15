@@ -1,10 +1,11 @@
 import LiveGrid from "@/components/LiveGrid";
 import LoFiToggle from "@/components/LoFiToggle";
 import FooterPoem from "@/components/FooterPoem";
+import BuyMeCoffee from "@/components/BuyMeCoffee";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background relative">
       <div className="max-w-7xl mx-auto">
         <header className="flex justify-between items-center px-8 py-8" role="banner">
           <div>
@@ -22,6 +23,7 @@ export default function Home() {
         </section>
         <FooterPoem />
       </div>
+      <BuyMeCoffee />
     </main>
   );
 }
