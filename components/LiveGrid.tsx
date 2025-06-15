@@ -72,18 +72,19 @@ export default function LiveGrid() {
       {liveCameras.map((camera) => (
         <figure
           key={camera.id}
-          className="relative aspect-video overflow-hidden rounded-2xl bg-zinc-900 ring-1 ring-zinc-800/40 focus-within:ring-accent focus-within:ring-2"
+          className="relative aspect-video overflow-hidden rounded-lg bg-zinc-900 focus-within:ring-2 focus-within:ring-accent focus-within:ring-offset-2 focus-within:ring-offset-background"
         >
           <LiveIframe src={camera.embedUrl} city={camera.city} />
 
-          {/*  ⬇️ Modern city & time overlay  */}
-          <figcaption className="absolute inset-x-0 bottom-0 flex flex-col gap-0.5 p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent backdrop-blur-md">
-            <span className="text-sm md:text-base font-medium tracking-wide text-zinc-100">
-              {camera.city}
-            </span>
-            <span className="text-xs md:text-sm font-mono text-zinc-200/80">
+          {/* Gradient overlay */}
+          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/70 to-transparent z-10" />
+
+          {/* City name and time label */}
+          <figcaption className="absolute bottom-3 left-4 z-20 text-zinc-100">
+            <div className="text-sm font-semibold tracking-wide">{camera.city}</div>
+            <div className="text-xs opacity-80">
               <Clock timezone={camera.timezone} />
-            </span>
+            </div>
           </figcaption>
         </figure>
       ))}
