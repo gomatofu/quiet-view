@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST='{"components/LiveGrid.tsx -> ./LiveIframe":{"id":6469,"files":["static/chunks/469.1507a13eee473183.js"]}}';

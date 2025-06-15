@@ -66,6 +66,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://quietview.app",
+    languages: {
+      "en": "https://quietview.app",
+      "x-default": "https://quietview.app",
+    },
   },
   manifest: "/manifest.json",
 };

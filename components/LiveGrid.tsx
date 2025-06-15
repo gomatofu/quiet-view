@@ -27,7 +27,7 @@ const liveCameras: LiveCamera[] = [
     country: "USA",
     timezone: "America/New_York",
     embedUrl:
-      "https://www.youtube-nocookie.com/embed/KGuCGd726RA?autoplay=1&mute=1&loop=1&controls=0&playlist=KGuCGd726RA&modestbranding=1&rel=0&showinfo=0&disablekb=1",
+      "https://www.youtube-nocookie.com/embed/rnXIjl_Rzy4?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1",
   },
   {
     id: "london",
@@ -35,15 +35,15 @@ const liveCameras: LiveCamera[] = [
     country: "UK",
     timezone: "Europe/London",
     embedUrl:
-      "https://www.youtube-nocookie.com/embed/JpWmGX55a40?autoplay=1&mute=1&loop=1&controls=0&playlist=JpWmGX55a40&modestbranding=1&rel=0&showinfo=0&disablekb=1",
+      "https://www.youtube-nocookie.com/embed/WKGK_hYnlGE?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1",
   },
   {
-    id: "paris",
-    city: "Paris",
-    country: "France",
-    timezone: "Europe/Paris",
+    id: "kohsamui",
+    city: "Thailand",
+    country: "Thailand",
+    timezone: "Asia/Bangkok",
     embedUrl:
-      "https://www.youtube-nocookie.com/embed/4qBiwe05Ffs?autoplay=1&mute=1&loop=1&controls=0&playlist=4qBiwe05Ffs&modestbranding=1&rel=0&showinfo=0&disablekb=1",
+      "https://www.youtube-nocookie.com/embed/Fw9hgttWzIg?autoplay=1&mute=1&loop=1&controls=0&playlist=Fw9hgttWzIg&modestbranding=1&rel=0&showinfo=0&disablekb=1",
   },
   {
     id: "sydney",
@@ -51,15 +51,15 @@ const liveCameras: LiveCamera[] = [
     country: "Australia",
     timezone: "Australia/Sydney",
     embedUrl:
-      "https://www.youtube-nocookie.com/embed/m1P4JTMiUXo?autoplay=1&mute=1&loop=1&controls=0&playlist=m1P4JTMiUXo&modestbranding=1&rel=0&showinfo=0&disablekb=1",
+      "https://www.youtube-nocookie.com/embed/5uZa3-RMFos?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1",
   },
   {
-    id: "saopaulo",
-    city: "São Paulo",
-    country: "Brazil",
-    timezone: "America/Sao_Paulo",
+    id: "venice",
+    city: "Venice",
+    country: "Italy",
+    timezone: "Europe/Rome",
     embedUrl:
-      "https://www.youtube-nocookie.com/embed/rCFlhvtAB-I?autoplay=1&mute=1&loop=1&controls=0&playlist=rCFlhvtAB-I&modestbranding=1&rel=0&showinfo=0&disablekb=1",
+      "https://www.youtube-nocookie.com/embed/HpZAez2oYsA?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1",
   },
 ];
 

@@ -53,7 +53,8 @@
       "disableStaticImages": false,
       "minimumCacheTTL": 60,
       "formats": [
-        "image/webp"
+        "image/webp",
+        "image/avif"
       ],
       "dangerouslyAllowSVG": false,
       "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;",
@@ -162,7 +163,7 @@
       "imgOptSequentialRead": null,
       "isrFlushToDisk": true,
       "workerThreads": false,
-      "optimizeCss": false,
+      "optimizeCss": true,
       "nextScriptWorkers": false,
       "scrollRestoration": false,
       "externalDir": false,
@@ -301,7 +302,8 @@
     ".next/server/server-reference-manifest.json",
     ".next/BUILD_ID",
     ".next/server/next-font-manifest.js",
-    ".next/server/next-font-manifest.json"
+    ".next/server/next-font-manifest.json",
+    ".next/static/css/f30f9ab3166553fb.css"
   ],
   "ignore": [
     "node_modules/next/dist/compiled/@ampproject/toolbox-optimizer/**/*"
